@@ -91,6 +91,10 @@ body {
     overflow: hidden;
 }
 
+.body-night {
+    background-color: #202C36;
+}
+
 .body-night .site-header {
     background-color: #2B3844;
 }
@@ -233,7 +237,12 @@ body {
     box-shadow: 0px 0px 7px 2px #00000007;
 }
 
-.country-item img {
+.country-item-link {
+    display: block;
+    text-decoration: none;
+}
+
+.country-item-link img {
     width: 100%;
     border-radius: 5px 5px 0 0;
 }
@@ -308,3 +317,195 @@ body {
         width: 135px;
     }
 }
+
+/* Start Country Info Page */
+.body-night .country-part-link,
+.body-night .border-country-link {
+    color: #fff;
+    background-color: #2B3844;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+    border-radius: 6px;
+}
+
+.body-night .country-part-link::before {
+    background-image: url("../images/arrow-left-white.svg");
+}
+
+.body-night .country-main-title,
+.body-night .country-info-item,
+.body-night .country-info-border-text {
+    color: #fff;
+}
+
+#country-info {
+    padding: 90px 0 343px 0;
+}
+
+.country-part-back-link-box {
+    margin-bottom: 80px;
+}
+
+.country-part-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 40px;
+    line-height: 20px;
+    color: #111517;
+    text-decoration: none;
+}
+
+.country-part-link::before {
+    width: 17px;
+    height: 17px;
+    margin: 4px 10px 0 0;
+    background-image: url("../images/arrow-left.svg");
+    background-repeat: no-repeat;
+    content: "";
+}
+
+.country-part-main-info-box {
+    align-items: center;
+    justify-content: center;
+}
+
+.country-main-title {
+    margin: 0;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+    color: #111517;
+}
+
+.country-info-list-box {
+    display: flex;
+}
+
+.country-info-list {
+    margin: 23px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.country-info-list:nth-child(2) {
+    margin-left: 141px;
+}
+
+.country-info-item {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+    color: #111517;
+}
+
+.country-info-borders {
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.border-country-list {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.border-country-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.border-country-link {
+    display: inline-block;
+    padding: 5px 28px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #111517;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+@media only screen and (max-width:1200px) {
+    #country-info {
+        padding: 90px 0 150px 0;
+    }
+
+    .country-main-info {
+        margin-top: 50px;
+    }
+
+    .country-part-img-box,
+    .country-info-list-box,
+    .country-info-borders {
+        display: flex;
+        justify-content: center;
+    }
+
+    .country-info-list-box {
+        margin-top: 23px;
+    }
+
+    .country-info-list {
+        margin: 0;
+    }
+
+    .country-main-title {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    #country-info {
+        padding: 40px 0 60px 0;
+    }
+
+    .country-part-back-link-box {
+        margin-bottom: 64px;
+    }
+
+    .country-part-link {
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 7px #0000004b;
+        border-radius: 2px;
+    }
+
+    .country-part-link::before {
+        width: 15px;
+        height: 15px;
+    }
+
+    .country-main-title {
+        text-align: left;
+    }
+
+    .country-info-list-box {
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    .country-info-list:nth-child(2) {
+        margin: 32px 0 0 0;
+    }
+
+    .country-info-borders {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 34px;
+    }
+
+    .border-country-list {
+        margin: 16px 0 0 0;
+    }
+
+    .border-country-link {
+        padding: 5px 15px;
+    }
+}
+
+/* End of Country Info Page */
