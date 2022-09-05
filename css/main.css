@@ -430,13 +430,19 @@ body {
 
 .country-info-borders {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     margin-top: 70px;
+}
+
+.country-info-border-text {
+    white-space: nowrap;
 }
 
 .border-country-list {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 0 0 0 15px;
     padding: 0;
     list-style: none;
@@ -456,6 +462,7 @@ body {
     box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
     border-radius: 2px;
     text-decoration: none;
+    margin-bottom: 10px;
 }
 
 @media only screen and (max-width:1200px) {
@@ -474,6 +481,10 @@ body {
         justify-content: center;
     }
 
+    .country-info-borders {
+        flex-direction: column;
+    }
+
     .country-info-list-box {
         margin-top: 23px;
     }
@@ -484,6 +495,10 @@ body {
 
     .country-main-title {
         text-align: center;
+    }
+
+    .country-info-border-text {
+        margin-bottom: 20px;
     }
 }
 
